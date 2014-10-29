@@ -23,6 +23,13 @@
         $callbacks[$eventId].push($callback);
     };
     var $bindIMEvent = function( $eventId, $callback ) {
+        /*
+         * 
+         * this code is written by reference to github:hnakamur's code
+         * Repository   (Github): https://github.com/hnakamur/jquery.japanese-input-change/
+         * License      (MIT):    https://github.com/hnakamur/jquery.japanese-input-change/blob/master/LICENSE
+         * 
+         */
         var ready       = true,
             isFirefox   = navigator.userAgent.indexOf('Firefox') != -1,
             beforeValue = null,
