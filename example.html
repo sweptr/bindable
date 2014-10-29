@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bindable.js</title>
+  </head>
+  <body>
+    <div>
+        <input type="text" size="10"
+            onblur="$bindable.apply(this, arguments)"
+            onfocus="$bindable.apply(this, arguments)"
+            onkeydown="$bindable.apply(this, arguments)"
+            onkeypress="$bindable.apply(this, arguments)"
+            onkeyup="$bindable.apply(this, arguments)"
+            data-bindable="typeText">
+        <br>
+        <p>hello <span id="name"></span></p>
+    </div>
+    <script src="./bindable.js"></script>
+    <script>
+        $bindable.bindIMEvent("typeText", function () {
+            console.log(this.value);
+        });
+    </script>
+  </body>
+</html>
