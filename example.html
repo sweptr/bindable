@@ -19,7 +19,7 @@
     <script src="./bindable.js"></script>
     <script>
         $bindable.bindIMEvent("typeText", function () {
-            console.log(this.value);
+            document.getElementById("name").textContent = this.value;
         });
     </script>
   </body>
